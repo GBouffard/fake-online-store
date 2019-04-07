@@ -2,11 +2,16 @@ import React from "react";
 import { connect } from "react-redux";
 
 import ProductListItem from "./product-list-item";
+import { cartItemsWithQuantities } from "../cart";
 
-const ProductListing = ({ products, addToCart }) => (
+const ProductListing = ({ products, addToCart, cart }) => (
   <div className="product-listing">
     {products.map(product => (
-      <ProductListItem product={product} addToCart={addToCart} />
+      <ProductListItem
+        product={product}
+        addToCart={addToCart}
+        cart={cartItemsWithQuantities(cart)}
+      />
     ))}
   </div>
 );
