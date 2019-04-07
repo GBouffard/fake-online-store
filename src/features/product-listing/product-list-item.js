@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductListItem = ({ product }) => {
   return (
-    <div>
+    <div className="product-list-item">
       <h3>{product.name}</h3>
       <img
         height={100}

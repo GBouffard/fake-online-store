@@ -2,7 +2,7 @@ import React from "react";
 import ProductListItem from "./product-list-item";
 
 const ProductListing = ({ products }) => (
-  <div>
+  <div className="product-listing">
     {products.map(product => (
       <ProductListItem product={product} />
     ))}

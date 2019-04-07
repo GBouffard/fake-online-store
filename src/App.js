@@ -19,7 +19,7 @@ const Navigation = () => (
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="page-container">
         <Navigation {...this.props} />
         <Router />
       </div>
