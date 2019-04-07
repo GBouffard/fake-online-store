@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import Router from "./Router";
 
 class App extends Component {
   render() {
-    return <div>Placeholder for fake online store</div>;
+    return (
+      <div>
+        <h1>Placeholder for fake online store</h1>
+        <Router />
+      </div>
+    );
   }
 }
 
