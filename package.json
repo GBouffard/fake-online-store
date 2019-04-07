@@ -9,9 +9,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "postinstall": "touch .env && echo \"SKIP_PREFLIGHT_CHECK=true\" > .env",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
