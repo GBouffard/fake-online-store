@@ -9,7 +9,7 @@ const ProductListItem = ({ product, addToCart, removeFromCart, cartItem }) => {
       <img
         height={100}
         title={product.name}
-        src={`/products/${product.image}`}
+        src={product.image}
         alt={product.name}
       />
       <div>{product.description}</div>

@@ -15,7 +15,7 @@ const Cart = ({ cart, addToCart, removeFromCart, removeAllFromCart }) => (
     </thead>
     <tbody>
       {sort(cart).map(item => (
-        <tr>
+        <tr key={item.id}>
           <td>{item.name}</td>
           <td>{item.quantity}</td>
           <td>
