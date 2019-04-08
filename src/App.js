@@ -11,7 +11,7 @@ const countAllCartItems = cart =>
 
 const Navigation = ({ cart }) => (
   <nav>
-    <ul>
+    <ul className="top-menu">
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
