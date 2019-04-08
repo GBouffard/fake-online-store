@@ -18,6 +18,9 @@ const Navigation = ({ cart }) => (
       <li>
         <NavLink to="/cart">Cart ({countAllCartItems(cart)})</NavLink>
       </li>
+      <li>
+        <NavLink to="/checkout">Check out</NavLink>
+      </li>
     </ul>
   </nav>
 );
