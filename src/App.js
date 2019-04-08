@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
+import { connect } from "react-redux";
 
 import Router from "./Router";
 
-const Navigation = () => (
+const countAllCartItems = cart =>
+  cart.reduce((acc, item) => {
+    return acc + item.quantity;
+  }, 0);
+
+const Navigation = ({ cart }) => (
   <nav>
     <ul>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/cart">Cart</NavLink>
+        <NavLink to="/cart">Cart ({countAllCartItems(cart)})</NavLink>
       </li>
     </ul>
   </nav>
@@ -27,4 +33,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  cart: state.cart
+});
+
+export default withRouter(connect(mapStateToProps)(App));
