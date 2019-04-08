@@ -3,12 +3,13 @@ import { connect } from "react-redux";
 
 import ProductListItem from "./product-list-item";
 
-const ProductListing = ({ products, addToCart, cart }) => (
+const ProductListing = ({ products, addToCart, removeFromCart, cart }) => (
   <div className="product-listing">
     {products.map(product => (
       <ProductListItem
         product={product}
         addToCart={addToCart}
+        removeFromCart={removeFromCart}
         cartItem={cart.filter(cartItem => cartItem.id === product.id)[0]}
       />
     ))}
